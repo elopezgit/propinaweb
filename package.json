@@ -1,0 +1,10 @@
+{
+  "name": "propina-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Perfil de equipo con reseñas de Google y propinas por alias",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}
