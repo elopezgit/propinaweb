@@ -214,8 +214,8 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 500;
-  white-space: nowrap;
 }
+.section-label span { min-width: 0; overflow-wrap: anywhere; }
 .section-label::before,
 .section-label::after {
   content: "";
@@ -259,15 +259,14 @@ a { color: inherit; text-decoration: none; }
 }
 .alias__logo svg { width: 30px; height: 30px; }
 
-.alias__info { display: flex; flex-direction: column; min-width: 0; flex: 1; }
-.alias__label { font-size: 0.68rem; font-weight: 600; opacity: 0.62; text-transform: uppercase; letter-spacing: 0.09em; }
+.alias__info { display: flex; flex-direction: column; min-width: 0; flex: 1; overflow: hidden; }
+.alias__label { font-size: 0.68rem; font-weight: 600; opacity: 0.62; text-transform: uppercase; letter-spacing: 0.09em; overflow-wrap: anywhere; }
 .alias__value {
+  min-width: 0;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .alias__copy {
@@ -319,11 +318,14 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 9px;
   padding: 12px 18px;
+  max-width: calc(100vw - 32px);
   border-radius: 999px;
   background: #f7f4ee;
   color: var(--ink);
   font-size: 0.85rem;
   font-weight: 700;
+  text-align: center;
+  overflow-wrap: anywhere;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
   opacity: 0;
   pointer-events: none;
@@ -331,7 +333,8 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
-.toast svg { width: 17px; height: 17px; color: #2e9d68; }
+.toast svg { flex: 0 0 auto; width: 17px; height: 17px; color: #2e9d68; }
+.toast span { min-width: 0; }
 
 /* ============ Entrance animation ============ */
 .topbar, .venue, .card, .footer {
@@ -350,6 +353,18 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 520px) {
   .shell { padding-top: 28px; }
   .card { padding: 16px; }
+}
+
+@media (max-width: 359px) {
+  .card { padding: 12px; }
+  .review { gap: 10px; padding: 13px; }
+  .review__logo { width: 32px; height: 32px; }
+  .review__copy small { font-size: 0.68rem; }
+  .alias { gap: 10px; padding: 10px 10px 10px 11px; }
+  .alias__logo { width: 38px; height: 38px; border-radius: 11px; }
+  .alias__logo svg { width: 26px; height: 26px; }
+  .alias__copy { width: 34px; height: 34px; border-radius: 10px; }
+  .alias__value { font-size: 0.92rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

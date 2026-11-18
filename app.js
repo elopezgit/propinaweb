@@ -79,7 +79,7 @@ function render() {
       <span class="alias__logo">${LOGOS[alias.brand] || LOGOS.generic}</span>
       <span class="alias__info">
         <span class="alias__label">${escapeHtml(alias.label)}</span>
-        <span class="alias__value">${escapeHtml(alias.value)}</span>
+        <span class="alias__value">${escapeHtml(alias.value).replace(".", ".<wbr>")}</span>
       </span>
       <span class="alias__copy" data-copy>${ICONS.copy}</span>`;
     btn.addEventListener("click", () => copyAlias(alias.value, btn));
