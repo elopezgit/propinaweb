@@ -1,0 +1,6 @@
+# Cabeceras de seguridad. Además, evita que se muestre el badge
+# "Powered by Netlify" que Netlify inyecta en los planes Free.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'"
