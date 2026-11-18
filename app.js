@@ -1,5 +1,5 @@
 /* ================================================================
-   Configuración única del bar de la hostería (sin perfiles individuales).
+   Configuración única del restaurante de la hostería (sin perfiles individuales).
    Reemplazá los alias por los reales del equipo cuando los tengas.
    ================================================================ */
 const SITE = {
@@ -9,14 +9,14 @@ const SITE = {
   aliases: [
     {
       label: "Mercado Pago · equipo",
-      value: "bar.atahualpa.mp",
+      value: "restaurante.atahualpa.mp",
       brand: "mp",
       tint: "#e8e9ff",
       ink: "#1e2a4a"
     },
     {
       label: "Nequi · equipo",
-      value: "bar.atahualpa.nx",
+      value: "restaurante.atahualpa.nx",
       brand: "nequi",
       tint: "#fff0e2",
       ink: "#3a2114"
@@ -64,7 +64,7 @@ function render() {
   review.href = SITE.reviewUrl;
   $("reviewHint").textContent = SITE.reviewHint;
   $("thanksText").textContent = SITE.thanks;
-  document.title = "Bar Hostería Atahualpa Yupanqui · Reseñas y propinas";
+  document.title = "Restaurante Hostería Atahualpa Yupanqui · Reseñas y propinas";
 
   const list = $("aliases");
   list.replaceChildren();

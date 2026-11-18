@@ -1,8 +1,8 @@
 # propinaweb
 
-Bar Hostería Atahualpa Yupanqui · Reseñas y propinas
+Restaurante Hostería Atahualpa Yupanqui · Reseñas y propinas
 
-Web app única para todo el equipo del bar: sin perfiles individuales ni fotos de personas. Muestra la identidad de la Hostería Municipal Atahualpa Yupanqui, el acceso directo a Google Review y los alias para dejar una propina.
+Web app única para todo el equipo del restaurante: sin perfiles individuales ni fotos de personas. Muestra la identidad de la Hostería Municipal Atahualpa Yupanqui, el acceso directo a Google Review y los alias para dejar una propina.
 
 ## Verla
 
@@ -24,13 +24,13 @@ const SITE = {
   reviewHint: "Hostería Atahualpa Yupanqui · Tafí Viejo",
   thanks: "¡Gracias por acompañarnos!",
   aliases: [
-    { label: "Mercado Pago · equipo", value: "bar.atahualpa.mp", brand: "mp", tint: "#e8e9ff", ink: "#1e2a4a" },
-    { label: "Nequi · equipo", value: "bar.atahualpa.nx", brand: "nequi", tint: "#fff0e2", ink: "#3a2114" }
+    { label: "Mercado Pago · equipo", value: "restaurante.atahualpa.mp", brand: "mp", tint: "#e8e9ff", ink: "#1e2a4a" },
+    { label: "Nequi · equipo", value: "restaurante.atahualpa.nx", brand: "nequi", tint: "#fff0e2", ink: "#3a2114" }
   ]
 };
 ```
 
-- **Alias:** reemplazar `bar.atahualpa.mp` y `bar.atahualpa.nx` por los alias reales del equipo.
+- **Alias:** reemplazar `restaurante.atahualpa.mp` y `restaurante.atahualpa.nx` por los alias reales del equipo.
 - **Logos disponibles:** `mp`, `nequi` y `generic`.
 - **Colores de cada alias:** `tint` (fondo) e `ink` (texto).
 - **Textos del lugar:** título, subtítulo, etiquetas y pie de página están en `index.html`.
@@ -38,12 +38,12 @@ const SITE = {
 ## Comportamiento
 
 - Tocar una tarjeta de alias copia el valor y muestra una confirmación; el icono cambia a ✔. Si el navegador bloquea la copia, se selecciona el alias para copiarlo manualmente.
-- "Dejá tu reseña del bar" abre directamente el formulario de Google Review del hotel en una pestaña nueva.
+- "Dejá tu reseña del restaurante" abre directamente el formulario de Google Review del hotel en una pestaña nueva.
 - Diseño adaptable con áreas seguras para notch, soporte para `prefers-reduced-motion` y navegación por teclado.
 
 ## Archivos
 
-- `index.html` — estructura y textos del bar.
+- `index.html` — estructura y textos del restaurante.
 - `styles.css` — diseño, fondo difuminado, animaciones y responsive.
 - `app.js` — configuración, render de alias y copia al portapapeles.
 - `server.js` — servidor de desarrollo usado por `npm run dev`.
